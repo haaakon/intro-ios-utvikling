@@ -186,11 +186,51 @@ let person = Person()
 
 ```
 ---
+#Klasser
+```
+class Person {
+  let name: String
+
+  init(name: String) {
+      self.name = name
+  }
+
+}
+
+let person = Person(name:"Håkon")
+
+```
+
+---
+
+---
 #iOS-utvikling
 
 
 Hver skjerm = Din subklasse av UIViewController
 
+```
 
+class MyViewController: UIViewController {
+
+}
+// Vi ser på dette rett i Xcode
+
+```
+
+---
+#IBOutlet
+
+Koble en label i storyboardet så den kan brukes i kode:
+
+```
+
+@IBoutlet weak var nameLabel: UILabel!
+
+
+```
+
+Drag & drop fra borteste meny for å koble dette
+Vi ser dette rett i Xcode
 
 ---
