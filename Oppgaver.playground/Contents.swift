@@ -30,6 +30,13 @@ import UIKit
 // Oppgave 7:
 // Skriv en funksjon som tar en Int som argument, og skriver ut forskjellige tekster basert pa om den er større, mindre eller lik 100
 
+// Oppgave 8:
+// Lag et array med både tall og bokstaver. Hva skjer?
+
+// Oppgave 9: 
+// Sett arrayet fra oppgave 8 til å være typen [Any] . Du kan lese mer om [Any] her https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TypeCasting.html under avsnittet Type Casting for Any and AnyObject. Prøv å legge til flere forskjellige objekter til arrayet.
+
+
 
 // #iOS
 
