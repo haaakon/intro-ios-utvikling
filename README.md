@@ -198,10 +198,10 @@ class Person {
 }
 
 let person = Person(name:"Håkon")
+print(person.name)  // skriver ut "Håkon"
 
 ```
 
----
 
 ---
 #iOS-utvikling
@@ -221,7 +221,7 @@ class MyViewController: UIViewController {
 ---
 #IBOutlet
 
-Koble en label i storyboardet så den kan brukes i kode:
+IBoutlets kobler UI-elementer til koden din slik at de kan endres runtime
 
 ```
 
@@ -232,5 +232,18 @@ Koble en label i storyboardet så den kan brukes i kode:
 
 Drag & drop fra borteste meny for å koble dette
 Vi ser dette rett i Xcode
+
+---
+#IBAction
+
+Kobler funksjoner til eventer som fyres pga interaksjon med UI-elementer
+Action settes opp i Storyboardet, drag & drop på samme måte som @IBOutlet
+
+```
+@IBAction func didTapButton(sender: UIButton) {
+  // do stuff after tapping button
+}
+
+```
 
 ---
