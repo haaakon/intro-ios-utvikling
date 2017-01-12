@@ -20,6 +20,7 @@ https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift
 ```
 
 let message = "Hello world!" // kan ikke endres
+// Java: String message = "Hello world!"
 
 var studentNumber = 100
 
