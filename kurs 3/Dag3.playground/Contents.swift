@@ -5,12 +5,37 @@ import Foundation
 import PlaygroundSupport
 
 
+// Repetisjon
+
+
+
+var closure : (() -> ())?
+
+
+closure = {
+
+
+}
+
+
+closure?()
+
+
+func closureFunction() {
+
+}
+
+
+
+closureFunction()
+
 let url = URL(string: "http://www.omdbapi.com/?t=star+wars&y=&plot=short&r=json")!
 let session = URLSession.shared
 
 let task = session.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
 
     let string = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+    print(string)
 
     let object = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments)
 
@@ -18,7 +43,40 @@ let task = session.dataTask(with: url, completionHandler: { (data, response, err
 })
 
 task.resume()
+
 PlaygroundPage.current.needsIndefiniteExecution = true
+
+
+let json = ["nawe": "The matrix"]
+
+
+class Movie {
+
+    let title: String
+
+    let genre: String?
+
+    init?(jsonDict: [String : Any]) {
+
+        guard let title = jsonDict["name"] as? String else {
+            return nil
+        }
+
+        self.title = title
+        self.genre = jsonDict["genre"] as? String
+
+    }
+    
+}
+
+if let movie = Movie(jsonDict: json) {
+
+} else {
+
+    print("json structure wrong: \(json)")
+
+}
+
 
 // Har du klart alle oppgavene fra de forrige øktene? Hvis ikke, gjør de ferdig.
 

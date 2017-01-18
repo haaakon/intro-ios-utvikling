@@ -1,6 +1,8 @@
 
 #Økt 3
 
+#### Mer Swift
+#### Flere skjermer + laste inn JSON
 
 ---
 
@@ -131,4 +133,20 @@ let task = session.dataTask(with: url, completionHandler: { (data, response, err
 
 task.resume()
 
+
 ```
+
+let url = URL(string: "http://www.omdbapi.com/?t=star+wars&y=&plot=short&r=json")!
+let session = URLSession.shared
+
+let task = session.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
+
+    let string = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+
+    let object = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments)
+
+
+})
+
+task.resume()
+PlaygroundPage.current.needsIndefiniteExecution = true

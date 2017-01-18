@@ -2,6 +2,79 @@
 
 import UIKit
 
+var name = "håkon"
+
+name = "krister"
+
+var numbers: [Any] = [34,34,3]
+
+
+numbers.append("hei")
+numbers.append(3.2)
+
+
+let numberOfStudents = 490099
+
+if numberOfStudents > 30 {
+    print("ett eller annet")
+} else {
+    print("else")
+}
+
+func hello( name: String, age : Int, userWrittenTitle: String?) {
+
+
+    if let actualUserWrittenTitle = userWrittenTitle {
+
+        print("hello \(name), age: \(age) title: \(actualUserWrittenTitle)")
+
+        
+    } else {
+
+        print("no title")
+
+    }
+    
+}
+
+hello(name: "world", age: 343, userWrittenTitle: "Dr")
+hello(name: "world", age: 343, userWrittenTitle: nil)
+hello(name: "world", age: 343, userWrittenTitle: nil)
+
+func sum(value1: Int, value2: Int) -> Int {
+
+    return value1 + value2
+
+}
+
+let number = sum(value1: 7, value2: 1330)
+
+
+func stuff(name: String) -> Int? {
+
+    return nil
+
+}
+
+class Person {
+
+    var name: String
+
+    init(name: String) {
+
+        self.name = name
+        
+    }
+    
+}
+
+let person = Person(name: "håkon")
+
+person.name = "vidar"
+
+
+
+
 // Oppgave 1
 // Lag en konstant med navnet ditt
 // Forsøk å sette verdien til noe annet.
@@ -10,6 +83,7 @@ import UIKit
 
 // Oppgave 2
 // Lag en varabel med antall studenter, endre den til forskjellige verdier 3 ganger
+
 
 
 // Oppgave 3
